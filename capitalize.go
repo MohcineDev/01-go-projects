@@ -14,6 +14,7 @@ func Capitalize(s string) string {
 	for i, v := range myStr {
 		if i == 0 && checkIfAlphaNumeric(v) == "lower" {
 			myStr[i] = myStr[i] - 32
+			
 		}
 		if i != 0 && checkIfAlphaNumeric(v) == "lower" && checkIfAlphaNumeric(myStr[i-1]) == "notAlphaNum" {
 			myStr[i] = myStr[i] - 32
@@ -21,6 +22,7 @@ func Capitalize(s string) string {
 			result += string(myStr[i])
 		}
 	}
+
 	return string(myStr)
 }
 
